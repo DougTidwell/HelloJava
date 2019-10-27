@@ -1,16 +1,10 @@
-pipeline {
-    agent any
-    stages {
-        stage('test-environment') {
-            steps {
-                sh 'mvn --version'
-            }
-        }
-        stage('build') {
-            steps {
-                sh 'mvn clean compile'
-            }
-        }
-    }
-}
+node ('worker1') {
 
+     stage('Source') { // for display purposes
+
+      // Get some code from our Git repository
+
+      git 'https://github.com/DougTidwell/HelloJava.git'
+
+      }
+}
