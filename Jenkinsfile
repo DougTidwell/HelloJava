@@ -1,4 +1,4 @@
-node ('worker1') {
+node ('indeed2') {
 
      stage('Source') { // for display purposes
 
