@@ -1,4 +1,4 @@
-node ('indeed2') {
+node ('master') {
 
      stage('Source') { // for display purposes
 
