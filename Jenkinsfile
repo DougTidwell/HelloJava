@@ -17,7 +17,7 @@ node ('master') {
       // Get some code from our Git repository
 
     git 'https://github.com/DougTidwell/HelloJava.git'
-    mvn 'clean compile package'
+    maven 'compile package'
 
 //      }
 }
