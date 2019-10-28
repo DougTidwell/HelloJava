@@ -1,8 +1,12 @@
 node ('master') {
-    step('Source') {
-        git 'https://github.com/DougTidwell/HelloJava.git'
+    steps {
+        shell('git clone https://github.com/DougTidwell/HelloJava.git')
+        shell('mvn clean package')
     }
-    step('Build') {
-        maven 'compile package'
-    }
+//    step('Source') {
+//        git 'https://github.com/DougTidwell/HelloJava.git'
+//    }
+//    step('Build') {
+//        maven 'compile package'
+//    }
 }
