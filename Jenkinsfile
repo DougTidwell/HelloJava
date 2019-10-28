@@ -1,8 +1,8 @@
 node ('master') {
-    stage('Source') {
+    step('Source') {
         git 'https://github.com/DougTidwell/HelloJava.git'
     }
-    stage('Build') {
+    step('Build') {
         maven 'compile package'
     }
 }
