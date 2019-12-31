@@ -1,19 +1,14 @@
 pipeline {
-  agent {
-    docker {
-      image 'maven:3.3.3'
-    }
-
-  }
+  agent any
   stages {
-    stage('build') {
-      steps {
-        sh 'mvn --version'
-      }
-    }
     stage('SCM') {
       steps {
         git(url: 'https://github.com/dougtidwell/hellojava', branch: 'master')
+      }
+    }
+    stage('Build') {
+      steps {
+        sh 'mvn clean package'
       }
     }
   }
